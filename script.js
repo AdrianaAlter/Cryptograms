@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", function(e){
   var words = document.getElementsByClassName("word");
   var letters = document.getElementsByClassName("letter");
   var alphabet = document.getElementById("alphabet");
-  var shuffled = _.shuffle(abc);
   var cats = [];
-  var code = {" ": " "};
+  var code;
   encoded = "";
   quoteSplit = "";
 
@@ -21,10 +20,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     });
   };
   var setCode = function(){
-    _.each(abc, function(letter){
-      var idx = abc.indexOf(letter);
-      code[letter] = shuffled[idx];
-    });
+    var shuffled = _.shuffle(_.shuffle(_.shuffle(_.shuffle(abc))));
+    code = _.object(_.zip(abc, shuffled));
   };
 
   var getCats = function(){
@@ -108,21 +105,26 @@ document.addEventListener("DOMContentLoaded", function(e){
         letters[i].children[0].value = inputChar;
       });
       game.appendChild(blanks);
-      crossOff(inputChar);
       jump(this);
     }
+    checkAlphabet();
   };
-  var crossOff = function(inputChar) {
-    var letter = _.findWhere(alphabet.children, {innerHTML: inputChar});
-    if (letter) {
-      letter.className = "crossed-off";
-    }
+  var checkAlphabet = function(){
+    var currentlyUsed = assembleInput();
+    _.each(alphabet.children, function(letter){
+      if (currentlyUsed.split("").includes(letter.innerHTML)){
+        crossOff(letter);
+      }
+      else {
+        uncross(letter);
+      }
+    });
   };
-  var uncross = function(inputChar) {
-    var letter = _.findWhere(alphabet.children, {innerHTML: inputChar});
-    if (letter) {
-      letter.className = "";
-    }
+  var crossOff = function(letter) {
+    letter.className = "crossed-off";
+  };
+  var uncross = function(letter) {
+    letter.className = "";
   };
   var jump = function(inputBox){
     var inputBoxes = Array.prototype.slice.call(document.getElementsByTagName('input'));
@@ -175,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     _.each(alphabet.children, function(letter){
       letter.className = "";
     });
+    setCode();
   };
 
   setAlphabet();
@@ -185,6 +188,5 @@ document.addEventListener("DOMContentLoaded", function(e){
     getQuote();
   });
   document.getElementsByTagName("button")[1].addEventListener("click", checkWon);
-  // encode("Meow meow meow.");
 
 });

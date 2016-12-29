@@ -33,6 +33,7 @@ html {
       padding: .5vw;
       button {
         background: $blue;
+        transition: background 1s, box-shadow 1s;
         color: floralwhite;
         float: left;
         cursor: pointer;

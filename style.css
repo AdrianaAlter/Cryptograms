@@ -30,6 +30,7 @@ html {
       padding: .5vw; }
       html #main #controls button {
         background: #102372;
+        transition: background 1s, box-shadow 1s;
         color: floralwhite;
         float: left;
         cursor: pointer;
