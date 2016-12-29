@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     if (abc.includes(char)){
       encoded += code[char];
       newInput.addEventListener("keyup", useInput);
+      newInput.maxLength = "1";
       newLabel.innerHTML = code[char];
     }
     else {
