@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
   var getCats = function(){
     $.ajax({
-      url: "http://quotes.rest/quote/categories.json",
+      url: "https://quotes.rest/quote/categories.json",
       headers: {
         'X-TheySaidSo-Api-Secret': 'i6_O1D7c5ELRg6RLg1DTIweF'
       },
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(e){
   var getQuote = function(){
     var cat = _.sample(cats);
     $.ajax({
-      url: "http://quotes.rest/quote/search.json?category=" + cat,
+      url: "https://quotes.rest/quote/search.json?category=" + cat,
       headers: {
         'X-TheySaidSo-Api-Secret': 'i6_O1D7c5ELRg6RLg1DTIweF'
       },
