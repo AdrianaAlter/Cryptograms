@@ -1,0 +1,146 @@
+html {
+  background-color: #102372;
+  background-image: url("https://www.transparenttextures.com/patterns/inflicted.png");
+  background-position: center;
+  box-sizing: padding-box;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  border: 0;
+  list-style: none; }
+  html .group:after {
+    display: block;
+    content: "";
+    clear: both; }
+  html #main {
+    width: 99%;
+    height: 96vh;
+    margin: auto; }
+    html #main #controls {
+      position: relative;
+      box-sizing: border-box;
+      height: 16vh;
+      width: 98vw;
+      background: rgba(255, 250, 240, 0.6);
+      border: 1vh groove #01001E;
+      padding: .5vw; }
+      html #main #controls button {
+        background: #102372;
+        color: floralwhite;
+        float: left;
+        cursor: pointer;
+        height: 100%;
+        width: 10%;
+        font-size: 3vh;
+        border: 0;
+        padding: .5vw;
+        margin: auto;
+        border-radius: 4%; }
+      html #main #controls button:hover {
+        background: #01001E; }
+      html #main #controls button:active {
+        outline: none;
+        box-shadow: inset 1px 1px 1px floralwhite; }
+      html #main #controls button:last-child {
+        float: right; }
+      html #main #controls #alphabet {
+        float: left;
+        color: #01001E;
+        list-style: none;
+        margin: auto;
+        line-height: 350%;
+        width: 76.8%;
+        height: 100%;
+        font-size: 3.5vh; }
+        html #main #controls #alphabet li {
+          float: left;
+          margin-right: .5vw;
+          transition: color 1s; }
+        html #main #controls #alphabet li:first-child {
+          margin-left: 15vw; }
+        html #main #controls #alphabet .crossed-off {
+          color: rgba(1, 0, 30, 0.5); }
+      html #main #controls #won {
+        display: none;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 25%;
+        width: 55%;
+        height: 100%;
+        background: rgba(1, 0, 30, 0.94);
+        border: 1vh double floralwhite; }
+        html #main #controls #won h1 {
+          margin: auto;
+          color: floralwhite;
+          display: block;
+          text-align: center;
+          padding-top: 4vh;
+          font-size: 6vh;
+          text-shadow: 1px 1px 1px #01001E; }
+    html #main #game {
+      height: 82%;
+      width: 97vw;
+      background: rgba(0, 0, 0, 0.6);
+      padding: .5vw; }
+      html #main #game h1 {
+        display: none; }
+      html #main #game #blanks {
+        list-style: none;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 99%;
+        overflow-y: auto;
+        margin: auto; }
+        html #main #game #blanks .word {
+          padding: 0;
+          float: left;
+          display: block;
+          height: 16vh;
+          width: auto;
+          margin-right: 2vw; }
+          html #main #game #blanks .word li {
+            display: block;
+            padding: 0;
+            float: left;
+            height: 100%;
+            width: 4vw;
+            border-top: 1px dotted transparent;
+            border-bottom: 1px dotted transparent;
+            border-left: 1px dotted transparent; }
+          html #main #game #blanks .word .letter {
+            border-color: floralwhite; }
+          html #main #game #blanks .word input, html #main #game #blanks .word h3 {
+            display: block;
+            border: none;
+            padding: none;
+            height: 4vw;
+            width: 4vw;
+            text-align: center;
+            float: left;
+            font-size: 3vh;
+            line-height: 300%;
+            background: floralwhite;
+            color: #01001E;
+            outline: none;
+            box-shadow: none; }
+          html #main #game #blanks .word h3 {
+            margin: 0;
+            background: #102372;
+            color: floralwhite;
+            font-size: 4vh;
+            font-weight: normal;
+            line-height: 200%; }
+          html #main #game #blanks .word .empty {
+            background: floralwhite;
+            border: 1px dotted black;
+            margin-bottom: 0.5vh; }
+          html #main #game #blanks .word .letter:last-child {
+            border-right: 1px dotted floralwhite; }
+
+/*# sourceMappingURL=style.css.map */

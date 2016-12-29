@@ -1,0 +1,171 @@
+$blue: #102372;
+$darkblue: #01001E;
+html {
+  background-color: $blue;
+  background-image: url("https://www.transparenttextures.com/patterns/inflicted.png");
+  background-position: center;
+  box-sizing: padding-box;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  border: 0;
+  list-style: none;
+  .group:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  #main {
+    width: 99%;
+    height: 96vh;
+    margin: auto;
+    #controls {
+      position: relative;
+      box-sizing: border-box;
+      height: 16vh;
+      width: 98vw;
+      background: transparentize(floralwhite, .4);
+      border: 1vh groove $darkblue;
+      padding: .5vw;
+      button {
+        background: $blue;
+        color: floralwhite;
+        float: left;
+        cursor: pointer;
+        height: 100%;
+        width: 10%;
+        font-size: 3vh;
+        border: 0;
+        padding: .5vw;
+        margin: auto;
+        border-radius: 4%;
+      }
+      button:hover {
+        background: $darkblue;
+      }
+      button:active {
+        outline: none;
+        box-shadow: inset 1px 1px 1px floralwhite;
+      }
+      button:last-child {
+        float: right;
+      }
+      #alphabet {
+        float: left;
+        color: $darkblue;
+        list-style: none;
+        margin: auto;
+        line-height: 350%;
+        width: 76.8%;
+        height: 100%;
+        font-size: 3.5vh;
+        li {
+          float: left;
+          margin-right: .5vw;
+          transition: color 1s;
+        }
+        li:first-child {
+          margin-left: 15vw;
+        }
+        .crossed-off {
+          color: transparentize($darkblue, .5);
+        }
+      }
+      #won {
+        display: none;
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 25%;
+        width: 55%;
+        height: 100%;
+        background: transparentize($darkblue, .06);
+        border: 1vh double floralwhite;
+        h1 {
+          margin: auto;
+          color: floralwhite;
+          display: block;
+          text-align: center;
+          padding-top: 4vh;
+          font-size: 6vh;
+          text-shadow: 1px 1px 1px $darkblue;
+        }
+      }
+    }
+    #game {
+      height: 82%;
+      width: 97vw;
+      background: transparentize(black, .4);
+      padding: .5vw;
+      h1 {
+        display: none;
+      }
+      #blanks {
+        list-style: none;
+        padding: 0;
+        display: block;
+        width: 100%;
+        height: 99%;
+        overflow-y: auto;
+        margin: auto;
+        .word {
+          padding: 0;
+          float: left;
+          display: block;
+          height: 16vh;
+          width: auto;
+          margin-right: 2vw;
+          li {
+            display: block;
+            padding: 0;
+            float: left;
+            height: 100%;
+            width: 4vw;
+            border-top: 1px dotted transparent;
+            border-bottom: 1px dotted transparent;
+            border-left: 1px dotted transparent;
+          }
+          .letter {
+            border-color: floralwhite;
+          }
+          input {
+            display: block;
+            border: none;
+            padding: none;
+            height: 4vw;
+            width: 4vw;
+            text-align: center;
+            float: left;
+            font-size: 3vh;
+            line-height: 300%;
+            background: floralwhite;
+            color: $darkblue;
+            outline: none;
+            box-shadow: none;
+          }
+          h3 {
+            @extend input;
+            margin: 0;
+            background: $blue;
+            color: floralwhite;
+            font-size: 4vh;
+            font-weight: normal;
+            line-height: 200%;
+          }
+          .empty {
+            background: floralwhite;
+            border: 1px dotted black;
+            margin-bottom: 0.5vh;
+          }
+          .letter:last-child {
+            border-right: 1px dotted floralwhite;
+          }
+        }
+      }
+    }
+  }
+}
