@@ -21,6 +21,8 @@ html {
     height: 96vh;
     margin: auto; }
     html #main #controls {
+      display: flex;
+      justify-content: space-between;
       position: relative;
       box-sizing: border-box;
       height: 16vh;
@@ -32,37 +34,29 @@ html {
         background: #102372;
         transition: background 1s, box-shadow 1s;
         color: floralwhite;
-        float: left;
         cursor: pointer;
         height: 100%;
-        width: 10%;
         font-size: 3vh;
         border: 0;
         padding: .5vw;
-        margin: auto;
+        flex-basis: 10%;
         border-radius: 4%; }
       html #main #controls button:hover {
         background: #01001E; }
       html #main #controls button:active {
         outline: none;
         box-shadow: inset 1px 1px 1px floralwhite; }
-      html #main #controls button:last-child {
-        float: right; }
       html #main #controls #alphabet {
-        float: left;
         color: #01001E;
         list-style: none;
-        margin: auto;
-        line-height: 350%;
-        width: 76.8%;
-        height: 100%;
+        flex-basis: 80%;
         font-size: 3.5vh; }
         html #main #controls #alphabet li {
           float: left;
-          margin-right: .5vw;
+          width: 2.25%;
+          margin-right: 1.1vw;
+          text-align: center;
           transition: color 1s; }
-        html #main #controls #alphabet li:first-child {
-          margin-left: 15vw; }
         html #main #controls #alphabet .crossed-off {
           color: rgba(1, 0, 30, 0.5); }
       html #main #controls #won {
